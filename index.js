@@ -29,6 +29,12 @@ const mainBtn = document.getElementById("mainBtn")
     
  }
 
+ function callApiDos() {}
+ function callApiTres() {}
+
+
 mainBtn.addEventListener("click", function () {
-   callApi()
-})
+
+    callApi()
+ 
+});
