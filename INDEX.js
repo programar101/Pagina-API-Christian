@@ -13,14 +13,16 @@ function callApi() {
 
        
         document.getElementById("displayScreen").innerHTML = `
+      
         <p>Esto es un video</p>
+        
         <video src=""${data.url}" width="640" height="480"></video>
         `
-             }else{
-                document.getElementById("displayScreen").innerHTML = `
+         }else{
+          document.getElementById("displayScreen").innerHTML = `
               
-                <img src="${data.url}" />`
-            }
+          <img src="${data.url}" />`
+         }
     })
 
 const mainBtn = document.getElementById("mainBtn")
