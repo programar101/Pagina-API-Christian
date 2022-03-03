@@ -2,16 +2,13 @@ body{
     background-color:pink ;
 }
 
-img{
-
+#mainDisplay{
     width: 200px; height: 40%;
     margin-top: 10px;
     margin: 0 auto;
-  
 }
 
 button{
-
     padding-top: 10px;
     padding-bottom: 10px;
     width: 200px;
@@ -28,7 +25,6 @@ button{
 }
 
 h1{
-
     font-size: 30px;
     width: 600px;
     padding: 20px;
@@ -39,5 +35,4 @@ div{
     padding: 20px;
     margin: 0 auto;
     display:flex;
-  
 }

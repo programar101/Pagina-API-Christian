@@ -5,36 +5,37 @@
 function callApi() {
 
     fetch("https://random.dog/woof.json?ref=apilist.fun")
-    .then(response => response.json())
-    .then(data => {
+        .then(response => response.json())
+        .then(data => {
         console.log(data)
 
-        if(data==data.mp4){
+         if(data.url.includes('.mp4')){
 
        
-        document.getElementById("displayScreen").innerHTML = `
+            document.getElementById("displayScreen").innerHTML = `
+    
+                 <video id="mainDisplay" src="${data.url}" type="video/mp4" width="320" height="240" controls></video>
+                `
+            }else if(data.url.includes('.webm')){
+            
+                 document.getElementById("displayScreen").innerHTML = `
       
-        <p>Esto es un video</p>
+                    <p>Esto es un video .webm</p>
         
-        <video src=""${data.url}" width="640" height="480"></video>
-        `
-         }else{
-          document.getElementById("displayScreen").innerHTML = `
+                      <video id="mainDisplay" src=""${data.url}" width="320" height="240" controls></video>
+                         `
+
+            }else{
+                 document.getElementById("displayScreen").innerHTML = `
               
-          <img src="${data.url}" />`
-         }
-    })
+                  <img id="mainDisplay" src="${data.url}" />`
+            }
+    })}
 
 const mainBtn = document.getElementById("mainBtn")
-    
- }
-
- function callApiDos() {}
- function callApiTres() {}
-
 
 mainBtn.addEventListener("click", function () {
-
+    
     callApi()
  
 });
